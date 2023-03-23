@@ -11,19 +11,14 @@ function buildMainCharacter(name, age, pronouns) {
 }
 
 function saveReview(newReview, reviews) {
-  if (reviews.includes(newReview) === false) {
+  if (!reviews.includes(newReview)) {
     return reviews.push(newReview);
   }
 }
 
 function calculatePageCount(title) {
-  titleWords = title.split('');
-  titleLetters = [];
-  for (var i = 0; i < titleWords.length; i++) {
-      titleLetters.push(titleWords[i]);
-  }
-  numLetters = titleLetters.length;
-  pageCount = numLetters * 20;
+  titleLetters = title.split('');
+  pageCount = titleLetters.length * 20;
   return pageCount;
 }
 
