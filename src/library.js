@@ -25,21 +25,6 @@ function checkoutBook(library, bookTitle, genre) {
   return `Sorry, there are currently no copies of ${bookTitle} available at the ${library.name}.`
 }
 
-// function takeStock(library, genre) {
-//     if (genre === undefined) {
-//       var numFantasy = library.shelves['fantasy'].length;
-//       var numFiction = library.shelves['fiction'].length;
-//       var numNonFiction = library.shelves['nonFiction'].length;
-
-//       var totalBooks = numFantasy + numFiction + numNonFiction;
-//       return `There are a total of ${totalBooks} books at the ${library.name}.`
-//     } else {
-//       var numBooksOnShelf = library.shelves[genre].length
-
-//       return `There are a total of ${numBooksOnShelf} ${genre} books at the ${library.name}.`
-//     }
-// }
-
 function takeStock(library, genre) {
   if (genre === undefined) {
   var numFantasy = library.shelves['fantasy'].length;
@@ -63,11 +48,6 @@ function takeStock(library, genre) {
     }
   }
 }
- 
-
-//shelf = library.shelves[shelf]
-//in loop, book = library.shelves[shelf][i]
-
 
 module.exports = {
   createLibrary,
