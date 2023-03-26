@@ -27,12 +27,14 @@ function checkoutBook(library, bookTitle, genre) {
 
 function takeStock(library, genre) {
   if (genre === undefined) {
-  var numFantasy = library.shelves['fantasy'].length;
-  var numFiction = library.shelves['fiction'].length;
-  var numNonFiction = library.shelves['nonFiction'].length;
+  var numFantasy = library.shelves.fantasy.length;
+  var numFiction = library.shelves.fiction.length;
+  var numNonFiction = library.shelves.nonFiction.length;
 
   var totalBooks = numFantasy + numFiction + numNonFiction;
+  
   return `There are a total of ${totalBooks} books at the ${library.name}.`;
+
   } else {
     var shelf = library.shelves[genre];
 
